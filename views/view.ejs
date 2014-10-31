@@ -1,0 +1,70 @@
+<!-- view.ejs -->
+<!doctype html>
+<script language="javascript" type="text/javascript">
+function validateForm() {
+    var x = document.forms["subForm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos< 1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+    else{alert("Thanks for subscribing, we'll keep you in the loop");}
+}
+</script>
+
+<html>
+<head>
+	<title>Node Emailer</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+	<style>
+		body 		{ padding-top:80px; }
+		.msg {
+    display: none;
+}
+.error {
+    color: red;
+}
+.success {
+    color: green;
+}
+	</style>
+</head>
+<body>
+<div class="container">
+
+<div class="col-sm-6 col-sm-offset-3">
+
+	<h1><span class="fa fa-sign-in"></span>Sign Up</h1>
+
+	
+	<!-- LOGIN FORM -->
+
+	<form name="subForm" action="/view" onSubmit="return validateForm()" method="post">
+		<div class="form-group">
+			<label>Email</label>
+			<input type="text" class="form-control" name="email">
+			<span class="msg error">Not a valid email address</span>
+			<span class="msg success">valid email address</span>
+		</div>
+		<div class="form-group">
+			<label>First Name</label>
+			<input type="firstname" class="form-control" name="firstname">
+		</div>
+		<div class="form-group">
+                        <label>Last Name</label>
+                        <input type="lastname" class="form-control" name="lastname"
+                </div>
+
+
+
+
+		<button type="submit" class="btn btn-warning btn-lg">Sign Up</button>
+	</form>
+
+</div>
+
+</div>
+</body>
+</html>

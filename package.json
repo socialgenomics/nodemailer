@@ -1,0 +1,21 @@
+{
+  "name": "EmailExample",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node emailer for landing page",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app"
+  },
+  "author": "Francis Menson",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+  "mongoose" : "~3.8.1",
+  "passport" : "~0.1.17",
+  "passport-local": "~0.1.6",
+  "connect-flash" : "~0.1.1",
+  "express" : "~4.0.0", 			
+  "ejs" : "~0.8.5",
+  "nodemailer": "0.3.29"
+  }
+}

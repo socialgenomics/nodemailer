@@ -1,1 +1,1 @@
-module.exports = {'url' : 'mongodb://@proximus.modulusmongo.net:2701'};
+module.exports = {'url' : 'mongodb://@proximus.modulusmongo.net:27017'};
